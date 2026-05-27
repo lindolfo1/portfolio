@@ -22,7 +22,7 @@ Houston, TX
 
 | | |
 |:---:|:---:|
-| ![Completed router](assets/01-cnc-router.jpg) | ![Controller enclosure](assets/01-cnc-controller.jpg) |
+| ![Completed router](assets/01-cnc-router.jpeg) | ![Controller enclosure](assets/01-cnc-controller.jpeg) |
 | *Completed router with workpiece on the bed. Aluminum frame, linear rails.* | *Custom 3D-printed controller enclosure with CNC shield and stepper drivers.* |
 
 - Aluminum extrusion frame with linear rails on all three axes
@@ -109,9 +109,3 @@ Houston, TX
 | **Electronics** | Stepper drivers, CNC controllers, RF front ends, SDR |
 | **Software** | Python, data pipelines, Plotly, scipy, Parquet |
 | **Astronomy** | Gaia archive (ADQL), radio astronomy, photometry |
-
-<br>
-
-## Contact
-
-**Email** &nbsp; your@email.com &nbsp;&nbsp; **LinkedIn** &nbsp; linkedin.com/in/yourprofile &nbsp;&nbsp; **GitHub** &nbsp; github.com/yourusername
