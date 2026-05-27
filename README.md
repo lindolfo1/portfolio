@@ -75,22 +75,28 @@ Houston, TX
 <br>
 
 ### `04` &nbsp; 3D Map of Galactic Dust &nbsp; ![year](https://img.shields.io/badge/2026-555?style=flat-square) ![data](https://img.shields.io/badge/15M_Stars-8338ec?style=flat-square) ![output](https://img.shields.io/badge/3D_·_GIF_·_HTML-555?style=flat-square)
-
+ 
 > From-scratch reconstruction of the dust distribution within ~500 pc of the Sun, built from Gaia DR3 photometry of ~15 million stars. End-to-end pipeline from raw archive query to interactive 3D visualization.
-
-| | | |
-|:---:|:---:|:---:|
-| ![Top-down view](assets/04-dust-topdown.jpg) | ![Edge-on view](assets/04-dust-edgeon.gif) | ![Oblique view](assets/04-dust-oblique.jpg) |
-| *Top-down. Polar projection at galactic plane. Sun at center, 100 pc arcs.* | *Edge-on. Looking down from above the galactic plane.* | *Oblique. Looking above the galactic plane toward galactic center.* |
-
+ 
+<div align="center">
+![Rotating 3D dust map](assets/04-dust-edgeon.gif)
+ 
+*120-frame rotation of the galactic dust volume. Edge-on view; looking down from above the galactic plane.*
+ 
+</div>
+| | |
+|:---:|:---:|
+| ![Top-down view](assets/04-dust-topdown.jpg) | ![Oblique view](assets/04-dust-oblique.jpg) |
+| *Top-down. Polar projection at galactic plane. Sun at center, 100 pc arcs.* | *Oblique. Looking above the galactic plane toward galactic center.* |
+ 
 - Chunked ADQL queries across 72 sky regions to work around the Gaia 3M-row response cap; retry logic and failure logging for long-running pulls; output in columnar Parquet
 - Per-star color excess derived from a hand-fit blue-edge polynomial over the HR diagram (intrinsic-color baseline for reddening)
 - KD-tree spatial indexing in Cartesian galactic coordinates; 3D Gaussian kernel weighting reconstructs the cumulative reddening field; centered finite differencing yields dust density
 - No off-the-shelf dust-map library used
 - Visualization: Plotly volumetric rendering, custom polar overlay anchored to the galactic plane, interactive HTML with toggleable star overlay, high-res stills via Kaleido, 120-frame rotation GIF
 - Reproduces structural features of the published Bayestar map along a test sightline: foreground dust at ~100 pc and the rise into the Cygnus complex at ~300 pc both visible
-
 <br>
+
 
 ## Skills & Tools
 
