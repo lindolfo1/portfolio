@@ -103,7 +103,3 @@ Houston, TX
 | **Astronomy** | Gaia archive (ADQL), radio astronomy, photometry |
 
 <br>
-
-## Contact
-
-**Email** &nbsp; your@email.com &nbsp;&nbsp; **LinkedIn** &nbsp; linkedin.com/in/yourprofile &nbsp;&nbsp; **GitHub** &nbsp; github.com/yourusername
