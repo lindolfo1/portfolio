@@ -57,13 +57,13 @@ Houston, TX
 
 <div align="center">
 
-![16-hour drift scan spectrogram](assets/03-drift-scan.jpg)
+![16-hour drift scan spectrogram](assets/03-drift-scan.png)
 
 *16-hour drift scan. Y-axis: frequency centered on 1420.405 MHz (orange marker). X-axis: time. The horizontal band is H-I emission; drift above/below the marker tracks Doppler shift from galactic rotation.*
 
 </div>
 
-| ![The Horn](assets/03-horn.jpg) | ![Inside the Horn](assets/03-horn-inside.jpg) | ![The Receiver](assets/03-receiver.jpg) |
+| ![The Horn](assets/03-horn.jpeg) | ![Inside the Horn](assets/03-horn-inside.jpeg) | ![The Receiver](assets/03-receiver.jpeg) |
 |:---:|:---:|:---:|
 | *Pyramidal horn from foil-faced polyiso panels* | *Waveguide section; probe couples to coax* | *1.42 GHz SAW-filtered LNA + RTL-SDR dongle* |
 
