@@ -1,6 +1,6 @@
 <div align="center">
 
-# ✦ Portfolio
+# Portfolio
 
 **Mechanical Design & Prototyping**
 
@@ -80,7 +80,7 @@ Houston, TX
 
 | | | |
 |:---:|:---:|:---:|
-| ![Top-down view](assets/04-dust-topdown.jpg) | ![Edge-on view](assets/04-dust-edgeon.jpg) | ![Oblique view](assets/04-dust-oblique.jpg) |
+| ![Top-down view](assets/04-dust-topdown.jpg) | ![Edge-on view](assets/04-dust-edgeon.gif) | ![Oblique view](assets/04-dust-oblique.jpg) |
 | *Top-down. Polar projection at galactic plane. Sun at center, 100 pc arcs.* | *Edge-on. Looking down from above the galactic plane.* | *Oblique. Looking above the galactic plane toward galactic center.* |
 
 - Chunked ADQL queries across 72 sky regions to work around the Gaia 3M-row response cap; retry logic and failure logging for long-running pulls; output in columnar Parquet
