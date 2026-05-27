@@ -1,14 +1,8 @@
-<div align="center">
-
-# Portfolio
-
 **Mechanical Design & Prototyping**
 
 CS degree · hands-on builder · fluent from CAD model through fabrication and software
 
 Houston, TX
-
-</div>
 
 <br>
 
