@@ -16,7 +16,7 @@ Houston, TX
 
 | | |
 |:---:|:---:|
-| ![EKF spacecraft navigation](ekf_plot.png) | ![Naive vs EKF](comparison_plot.png) |
+| ![EKF spacecraft navigation](assets/ekf_plot.png) | ![Naive vs EKF](assets/comparison_plot.png) |
 | *EKF estimate vs true orbit with 2σ uncertainty ellipses. Max error ~0.05 AU at aphelion.* | *Naive direct inversion peaks at ~6.2 AU error at aphelion. EKF stays below 0.05 AU — 120× improvement.* |
 
 - **State vector** `[x, y, z, vx, vy, vz]` in heliocentric Cartesian; units AU and AU/s throughout
