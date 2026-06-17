@@ -14,8 +14,6 @@ Houston, TX
 
 > Derived and implemented an Extended Kalman Filter for autonomous deep-space position and velocity estimation. Sensor suite: solar angular radius (range proxy) and star-tracker azimuth/elevation (bearing). No GPS. No ground contact. Tested on a highly elliptical asteroid-belt orbit (a = 3.9 AU, e = 0.6) — a geometry that stresses any range-based estimator at aphelion.
 
-| | |
-|:---:|:---:|
 | ![EKF spacecraft navigation](assets/ekf_plot.png) | ![Naive vs EKF](assets/comparison_plot.png) |
 | *EKF estimate vs true orbit with 2σ uncertainty ellipses. Max error ~0.05 AU at aphelion.* | *Naive direct inversion peaks at ~6.2 AU error at aphelion. EKF stays below 0.05 AU — 120× improvement.* |
 
@@ -39,8 +37,7 @@ Houston, TX
 
 </div>
 
-| | |
-|:---:|:---:|
+
 | ![Top-down view](assets/04-dust-topdown.jpg) | ![Oblique view](assets/04-dust-oblique.jpg) |
 | *Top-down. Polar projection at galactic plane. Sun at center, 100 pc arcs.* | *Oblique. Looking above the galactic plane toward galactic center.* |
 
@@ -75,8 +72,7 @@ Houston, TX
 
 > Designed and built from scratch in 3 months. 20″ × 10″ × 4″ working envelope; cuts aluminum, acrylic, and wood.
 
-| | |
-|:---:|:---:|
+
 | ![Completed router](assets/01-cnc-router.jpeg) | ![Controller enclosure](assets/01-cnc-controller.jpeg) |
 | *Completed router with workpiece on the bed. Aluminum frame, linear rails.* | *Custom 3D-printed controller enclosure with CNC shield and stepper drivers.* |
 
