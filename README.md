@@ -12,18 +12,21 @@ Houston, TX
 
 ### `01` &nbsp; Spacecraft Navigation — Extended Kalman Filter &nbsp; ![year](https://img.shields.io/badge/2026-555?style=flat-square) ![solo](https://img.shields.io/badge/Solo-555?style=flat-square) ![result](https://img.shields.io/badge/120×_over_naive-2a9d8f?style=flat-square)
 
-> Derived and implemented an Extended Kalman Filter for autonomous deep-space position and velocity estimation. Sensor suite: solar angular radius (range proxy) and star-tracker azimuth/elevation (bearing). No GPS. No ground contact. Tested on a highly elliptical asteroid-belt orbit (a = 3.9 AU, e = 0.6) — a geometry that stresses any range-based estimator at aphelion.
+> Derived and implemented an Extended Kalman Filter for autonomous deep-space navigation: position and velocity from passive optics alone. Sensors are solar angular radius for range and star-tracker azimuth/elevation for bearing. Tested on a highly elliptical asteroid-belt orbit (a = 3.9 AU, e = 0.6).
 
 | | |
 |:---:|:---:|
 | ![EKF spacecraft navigation](assets/ekf_plot.png) | ![Naive vs EKF](assets/comparison_plot.png) |
 | *EKF estimate vs true orbit with 2σ uncertainty ellipses. Max error ~0.05 AU at aphelion.* | *Naive direct inversion peaks at ~6.2 AU error at aphelion. EKF stays below 0.05 AU — 120× improvement.* |
 
-- **State vector** `[x, y, z, vx, vy, vz]` in heliocentric Cartesian; units AU and AU/s throughout
-- **Dynamics model** — Newton's law of gravitation `a = −(GM/r³)r̂` propagates state; F is the linearised gravity Jacobian `∂aᵢ/∂rⱼ = GM(3rᵢrⱼ/r⁵ − δᵢⱼ/r³)` recomputed each step for covariance propagation — the standard EKF separation of nonlinear state propagation from linearised uncertainty propagation
-- **Measurement function** — nonlinear `h(x) = [arcsin(R☉/r), arctan2(y,x), arcsin(z/r)]` maps Cartesian state to sensor space `[ρ, θ, φ]`; Jacobian H derived analytically and recomputed each step
-- **Observability analysis** — residual ~0.05 AU error at aphelion is a fundamental limit: `dr/dρ = −R☉/sin²(ρ)` diverges as the sun subtends a smaller angle; uncertainty ellipses in the covariance plot correctly inflate in the radial direction, confirming the filter knows where it is uncertain
-- **Tuning** — process noise Q `diag[1e-6, 1e-6, 1e-6, 1e-8, 1e-8, 1e-8]`; measurement noise R `diag[1e-10, 1e-12, 1e-12]` (sensor variances in rad²); initial P on diagonal
+- **State** `[x, y, z, vx, vy, vz]` in heliocentric Cartesian, AU and AU/s throughout.
+- **Dynamics** Two-body gravity `a = −(GM/r³)r`, propagated with RK4. Covariance propagates through the linearised gravity Jacobian `∂aᵢ/∂rⱼ = GM(3rᵢrⱼ/r⁵ − δᵢⱼ/r³)`, rebuilt each step.
+- **Measurement** Nonlinear `h(x) = [arcsin(R☉/r), arctan2(y,x), arcsin(z/r)]` maps Cartesian state to sensor space `[ρ, θ, φ]`, with H derived analytically.
+- **Tuning** Process noise from a piecewise white-noise-acceleration model with position/velocity cross terms, driven by a single parameter (σ_a = 1×10⁻¹⁸ AU/s²). Measurement noise `R = diag[1e-10, 1e-12, 1e-12]` rad².
+- **Results** Steady-state position error ~2×10⁻⁵ AU (about 3,000 km), against 0.11 AU RMS for naive per-measurement inversion. Roughly 600× better. Mean NIS of 2.99 against a target of 3.0 confirms the covariance matches the filter's actual error rather than just looking plausible.
+- **Observability** Uncertainty ellipses elongate along the sun line and grow toward aphelion, matching `dr/dρ = −R☉/sin²ρ`. Range is the weak direction and gets weaker as the solar disk shrinks. Orbital dynamics suppress it but cannot remove it.
+- **Validation** Caught three compounding bugs during validation, including a one-step measurement lag that pinned error at a fixed floor no amount of tuning could clear. Isolated it by seeding the filter with the true state, which separated model error from bookkeeping error.
+
 
 <br>
 
