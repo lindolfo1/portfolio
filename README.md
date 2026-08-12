@@ -14,10 +14,10 @@ Houston, TX
 
 > Derived and implemented an Extended Kalman Filter for autonomous deep-space navigation: position and velocity from passive optics alone. Sensors are solar angular radius for range and star-tracker azimuth/elevation for bearing. Tested on a highly elliptical asteroid-belt orbit (a = 3.9 AU, e = 0.6).
 
-| | |
-|:---:|:---:|
+| EKF vs true orbit | Naive vs EKF |
+|---|---|
 | ![EKF spacecraft navigation](assets/ekf_plot.png) | ![Naive vs EKF](assets/comparison_plot.png) |
-| *EKF estimate vs true orbit with 2σ uncertainty ellipses. Max error ~0.05 AU at aphelion.* | *Naive direct inversion peaks at ~6.2 AU error at aphelion. EKF stays below 0.05 AU — 120× improvement.* |
+| *EKF estimate vs true orbit with 2σ uncertainty ellipses (exaggerated; at true scale they are sub-pixel). Steady-state error ~2×10⁻⁵ AU.* | *Naive direct inversion peaks at ~0.65 AU near aphelion. EKF holds 0.000182 AU RMS — roughly 600× better.* |
 
 - **State** `[x, y, z, vx, vy, vz]` in heliocentric Cartesian, AU and AU/s throughout.
 - **Dynamics** Two-body gravity `a = −(GM/r³)r`, propagated with RK4. Covariance propagates through the linearised gravity Jacobian `∂aᵢ/∂rⱼ = GM(3rᵢrⱼ/r⁵ − δᵢⱼ/r³)`, rebuilt each step.
