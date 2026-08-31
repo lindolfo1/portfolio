@@ -10,7 +10,7 @@ Houston, TX
 
 <br>
 
-### `01` &nbsp; Autonomous Satellite Rendezvous &nbsp; ![year](https://img.shields.io/badge/2026-555?style=flat-square) ![solo](https://img.shields.io/badge/Solo-555?style=flat-square) ![result](https://img.shields.io/badge/1_km_→_20_m-2a9d8f?style=flat-square) ![stack](https://img.shields.io/badge/C++_·_Trick-264653?style=flat-square)
+### `01` &nbsp; Autonomous Satellite Rendezvous &nbsp; ![year](https://img.shields.io/badge/2026-555?style=flat-square) ![stack](https://img.shields.io/badge/C++_·_Trick-264653?style=flat-square)
 
 > A closed guidance and navigation loop for a chaser satellite closing on a passive target in a 500 km circular orbit, built in Trick. Coupled attitude and relative-state filters, guidance built on Clohessy-Wiltshire transfers, burn execution through a thruster model, and a truth simulation the estimator never gets to see. The chaser starts about a kilometer out at a dispersed position and parks 20 m behind the target.
 
