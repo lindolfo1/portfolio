@@ -33,7 +33,7 @@ https://github.com/user-attachments/assets/9619d791-254c-4c13-80cc-baccf9675db1
 
 <br>
 
-### `02` &nbsp; Spacecraft Navigation: Extended Kalman Filter &nbsp; ![year](https://img.shields.io/badge/2026-555?style=flat-square) ![solo](https://img.shields.io/badge/Solo-555?style=flat-square) ![result](https://img.shields.io/badge/600×_over_naive-2a9d8f?style=flat-square)
+### `02` &nbsp; Spacecraft Navigation: Extended Kalman Filter &nbsp; ![year](https://img.shields.io/badge/2026-555?style=flat-square) ![solo](https://img.shields.io/badge/Solo-555?style=flat-square) 
 
 > Derived and implemented an Extended Kalman Filter for autonomous deep-space navigation: position and velocity from passive optics alone. The sensors are solar angular radius for range and star-tracker azimuth/elevation for bearing. Tested on a highly elliptical asteroid-belt orbit (a = 3.9 AU, e = 0.6).
 
@@ -56,7 +56,7 @@ https://github.com/user-attachments/assets/9619d791-254c-4c13-80cc-baccf9675db1
 
 <br>
 
-### `03` &nbsp; 3D Map of Galactic Dust &nbsp; ![year](https://img.shields.io/badge/2026-555?style=flat-square) ![data](https://img.shields.io/badge/15M_Stars-8338ec?style=flat-square) ![output](https://img.shields.io/badge/3D_·_GIF_·_HTML-555?style=flat-square)
+### `03` &nbsp; 3D Map of Galactic Dust &nbsp; ![year](https://img.shields.io/badge/2026-555?style=flat-square) 
 
 > Reconstructs the 3D dust density field within ~500 pc of the Sun from Gaia DR3 photometry of about 15 million stars. The pipeline queries the archive, pulls per-star reddening, estimates the field, and renders it.
 
@@ -81,7 +81,7 @@ https://github.com/user-attachments/assets/9619d791-254c-4c13-80cc-baccf9675db1
 
 <br>
 
-### `04` &nbsp; Solar Projector Telescopes &nbsp; ![year](https://img.shields.io/badge/2024-555?style=flat-square) ![role](https://img.shields.io/badge/Co--Founder-e76f51?style=flat-square) ![deadline](https://img.shields.io/badge/Apr_8_Eclipse-555?style=flat-square)
+### `04` &nbsp; Solar Projector Telescopes &nbsp; ![year](https://img.shields.io/badge/2024-555?style=flat-square) ![role](https://img.shields.io/badge/Co--Founder-e76f51?style=flat-square)
 
 > Co-founded a company to design and manufacture solar projector telescopes for the April 8, 2024 total solar eclipse. Concept to multi-unit production in three months.
 
@@ -100,7 +100,7 @@ https://github.com/user-attachments/assets/9619d791-254c-4c13-80cc-baccf9675db1
 
 <br>
 
-### `05` &nbsp; 3-Axis CNC Router &nbsp; ![year](https://img.shields.io/badge/2022-555?style=flat-square) ![budget](https://img.shields.io/badge/$250-2a9d8f?style=flat-square) ![solo](https://img.shields.io/badge/Solo-555?style=flat-square)
+### `05` &nbsp; 3-Axis CNC Router &nbsp; ![year](https://img.shields.io/badge/2022-555?style=flat-square) 
 
 > Designed and built from scratch in 3 months. 20″ × 10″ × 4″ working envelope; cuts aluminum, acrylic, and wood.
 
@@ -116,7 +116,7 @@ https://github.com/user-attachments/assets/9619d791-254c-4c13-80cc-baccf9675db1
 
 <br>
 
-### `06` &nbsp; 1.42 GHz Radio Telescope &nbsp; ![year](https://img.shields.io/badge/2019-555?style=flat-square) ![result](https://img.shields.io/badge/H--I_Line_Resolved-264653?style=flat-square)
+### `06` &nbsp; 1.42 GHz Radio Telescope &nbsp; ![year](https://img.shields.io/badge/2019-555?style=flat-square) 
 
 > A backyard hydrogen-line detector built from foil-faced insulation board. Resolved the 21 cm H-I emission line from the Milky Way in a 16-hour transit scan.
 
@@ -135,7 +135,7 @@ https://github.com/user-attachments/assets/9619d791-254c-4c13-80cc-baccf9675db1
 - Pyramidal horn antenna from foil-faced polyiso panels, with a waveguide section and coax-coupled probe
 - RF chain: 1.42 GHz SAW-filtered LNA into an RTL-SDR dongle
 - Fixed pointing. Earth's rotation sweeps the beam across the galactic plane, and long integration lets the H-I line come up out of thermal noise.
-- Drift above and below the rest frequency (1420.405 MHz) is visible in the spectrogram, tracking Doppler shift from galactic rotation
+- Drift above and below the rest frequency (1420.405 MHz) is visible in the spectrogram, Doppler shift visible from galactic rotation
 
 <br>
 
@@ -144,11 +144,11 @@ https://github.com/user-attachments/assets/9619d791-254c-4c13-80cc-baccf9675db1
 | Domain | Details |
 |:---|:---|
 | **State estimation** | Extended and multiplicative Kalman filters, attitude and gyro bias estimation, covariance propagation, Jacobian linearization, process and measurement noise tuning, NIS consistency checking |
-| **Navigation** | Relative navigation in LVLH, Clohessy-Wiltshire dynamics, TRIAD attitude determination, sensor fusion, observability analysis, spherical and Cartesian transforms |
-| **Guidance** | Two-burn CW targeting, delta-v and transfer time trades, waypoint sequencing, burn scheduling against a thruster model |
+| **Navigation** | Relative navigation in LVLH, sensor fusion, observability analysis, spherical and Cartesian transforms |
+| **Guidance** | CW targeting, delta-v and transfer time trades, waypoint sequencing, burn scheduling against a thruster model |
 | **Flight dynamics** | Two-body and J2 gravity, RK4 propagation, Keplerian orbits, body and LVLH frame conversions |
 | **Simulation** | Trick, multi-rate scheduling, dispersed initial conditions, truth models separated from estimators, run logging and replay |
-| **Software** | C++, Eigen, Python, numpy, scipy, matplotlib, Plotly, Parquet, Streamlit |
+| **Software** | C++, Python, numpy, scipy, matplotlib, Parquet, Streamlit |
 | **CAD / CAM** | Fusion 360 (design + CAM), 3D printing |
 | **Fabrication** | CNC routing, aluminum & wood, plywood machining |
 | **Electronics** | Stepper drivers, CNC controllers, RF front ends, SDR |
